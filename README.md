@@ -2,7 +2,7 @@
 
 ---
 
-## Project Overview
+# GenHack 4 - 2025 - Project: Urban Heat Island Bias Correction for ERA5-Land Analysis
 
 ### The Challenge
 Urban Heat Islands (UHI) represent one of the most significant anthropogenic modifications to local climate, with profound implications for public health, energy consumption, and urban resilience. The **GenHack 4** challenge focused on analyzing and correcting systematic biases in ERA5-Land reanalysis data when applied to urban environments, using Madrid, Spain as a primary case study.
