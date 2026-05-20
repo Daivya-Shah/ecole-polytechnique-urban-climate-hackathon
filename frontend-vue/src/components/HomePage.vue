@@ -1,7 +1,7 @@
 <template>
     <div class="homepage">
       <section class="hero">
-        <h1 class="hero-title">GenHack4 - Team 7 - PentaGen</h1>
+        <h1 class="hero-title">GenHack4</h1>
         <p class="hero-subtitle">
           Explore temperature biases between ERA5 reanalysis and local station observations,
           understand UHI patterns, and run advanced AI/ML models — all in one dashboard.

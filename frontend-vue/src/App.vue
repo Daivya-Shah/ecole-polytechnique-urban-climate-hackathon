@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="app-header">
-      <h1 class="app-title">GenHack4 - PentaGen Team</h1>
+      <h1 class="app-title">GenHack4</h1>
     </header>
     
 
