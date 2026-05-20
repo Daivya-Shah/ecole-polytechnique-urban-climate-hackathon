@@ -1,4 +1,4 @@
-# GenHack 4 - 2025 - Project: Urban Heat Island Bias Correction for ERA5-Land Analysis
+﻿# GenHack 4 - 2025 - Project: Urban Heat Island Bias Correction for ERA5-Land Analysis
 
 ## Project Overview
 
@@ -26,7 +26,7 @@ We developed a **four-model ensemble** specifically designed to address differen
 | Model | Purpose | Key Innovation |
 |-------|---------|----------------|
 | **XGBoost Bias Correction** | Corrects systematic ERA5 biases | Nonlinear, feature-dependent correction |
-| **Random Forest UHI Prediction** | Predicts UHI intensity directly | Exceptional generalization (0.009 R² gap) |
+| **Random Forest UHI Prediction** | Predicts UHI intensity directly | Exceptional generalization (0.009 RÂ² gap) |
 | **Ridge Regression Downscaling** | Statistical downscaling of ERA5 | Interpretable coefficients for physical understanding |
 | **Quantile Regression** | Uncertainty quantification | Full prediction intervals for risk assessment |
 
@@ -43,9 +43,9 @@ We developed a **four-model ensemble** specifically designed to address differen
 ### Madrid's Urban Climate Signature (2020-2025)
 
 #### Temperature Validation Results
-- **Maximum Temperature (TX)**: Excellent agreement with ERA5 (R²=0.992, bias=+0.34°C)
-- **Minimum Temperature (TN)**: Significant warm bias (+1.95°C), amplified during heatwaves (+2.99°C)
-- **Nocturnal UHI Intensity**: Mean = 2.25°C, extreme events up to 7.76°C
+- **Maximum Temperature (TX)**: Excellent agreement with ERA5 (RÂ²=0.992, bias=+0.34Â°C)
+- **Minimum Temperature (TN)**: Significant warm bias (+1.95Â°C), amplified during heatwaves (+2.99Â°C)
+- **Nocturnal UHI Intensity**: Mean = 2.25Â°C, extreme events up to 7.76Â°C
 
 #### Climate Extremes Profile
 - **Heatwaves**: 30 events/year, average duration 7.8 days, maximum 43 days
@@ -53,7 +53,7 @@ We developed a **four-model ensemble** specifically designed to address differen
 - **Precipitation extremes**: 99th percentile threshold = 17.82 mm/day
 
 #### Environmental Relationships
-- **NDVI cooling elasticity**: -16.52°C per NDVI unit (strong theoretical cooling potential)
+- **NDVI cooling elasticity**: -16.52Â°C per NDVI unit (strong theoretical cooling potential)
 - **Wind-temperature correlation**: Weak (-0.12), suggesting radiative processes dominate
 - **Pressure-temperature relationship**: Strong (-0.33 to -0.39), indicating synoptic control
 
@@ -82,13 +82,13 @@ We developed a **four-model ensemble** specifically designed to address differen
 
 ```
 Frontend (React/Vue.js) 
-    ↓
+    â†“
 API Layer (Flask + 25+ endpoints)
-    ↓
+    â†“
 Data Processing (Pandas/NumPy/SciPy)
-    ↓
+    â†“
 Machine Learning (Scikit-learn/XGBoost)
-    ↓
+    â†“
 Data Storage (CSV/JSON + metadata)
 ```
 
@@ -118,15 +118,15 @@ Data Storage (CSV/JSON + metadata)
 
 ### Model Performance Summary
 
-| Model | CV RMSE | CV R² | Generalization Gap |
+| Model | CV RMSE | CV RÂ² | Generalization Gap |
 |-------|---------|-------|-------------------|
-| **Random Forest UHI** | 0.21°C | 0.737 | 0.009 (excellent) |
-| **Ridge Regression** | 1.88°C | 0.893 | 0.099 (good) |
-| **XGBoost Bias Correction** | 2.78°C | 0.886 | 0.240 (moderate) |
+| **Random Forest UHI** | 0.21Â°C | 0.737 | 0.009 (excellent) |
+| **Ridge Regression** | 1.88Â°C | 0.893 | 0.099 (good) |
+| **XGBoost Bias Correction** | 2.78Â°C | 0.886 | 0.240 (moderate) |
 | **Quantile Regression** | - | - | 68.3% coverage (80% target) |
 
 ### Key Performance Indicators
-- **UHI prediction accuracy**: ±0.21°C (best in class for daily station-based prediction)
+- **UHI prediction accuracy**: Â±0.21Â°C (best in class for daily station-based prediction)
 - **Bias reduction**: 11% improvement over raw ERA5 for minimum temperatures
 - **Computational efficiency**: All models train in <30 minutes, predict in <1 second
 - **Scalability**: Framework extensible to 100+ European cities
@@ -187,7 +187,7 @@ Data Storage (CSV/JSON + metadata)
 - **Frontend**: React, D3.js
 
 ### Acknowledgments
-We extend our gratitude to the **GenHack 2025 organizing committee**, **BNP Paribas "Stress Test" Chair**, and **École Polytechnique** for providing this exceptional platform for climate innovation.
+We extend our gratitude to the **GenHack 2025 organizing committee**, **BNP Paribas "Stress Test" Chair**, and **Ã‰cole Polytechnique** for providing this exceptional platform for climate innovation.
 
 ---
 
@@ -203,5 +203,3 @@ For questions, collaborations, or access to the complete codebase:
 
 ---
 **Hackathon**: GenHack 4 2025
-#   e c o l e - p o l y t e c h n i q u e - u r b a n - c l i m a t e - h a c k a t h o n  
- 
