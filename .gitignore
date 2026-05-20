@@ -1,4 +1,13 @@
 # .gitignore
+# Large raw data folder - download separately, do not commit
+Data/
+
+# Server/dev log files
+flask_out.txt
+flask_err.txt
+vite_out.txt
+vite_err.txt
+
 node_modules/
 __pycache__/
 *.py[cod]

@@ -24,11 +24,13 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODELS_DIR = os.path.join(BASE_DIR, "week4_simple_models")
 os.makedirs(MODELS_DIR, exist_ok=True)
 
+DATA_DIR = os.path.join(BASE_DIR, "Data")
+
 PATHS = {
-    "era5": os.path.join(BASE_DIR, "derived-era5-land-daily-statistics"),
-    "stations_dir": os.path.join(BASE_DIR, "ECA_blend_tx"),
-    "stations_meta": os.path.join(BASE_DIR, "ECA_blend_tx", "stations.txt"),  # ADD THIS
-    "ndvi": os.path.join(BASE_DIR, "sentinel2_ndvi"),
+    "era5": os.path.join(DATA_DIR, "derived-era5-land-daily-statistics"),
+    "stations_dir": os.path.join(DATA_DIR, "ECA_blend_tx"),
+    "stations_meta": os.path.join(DATA_DIR, "ECA_blend_tx", "stations.txt"),
+    "ndvi": os.path.join(DATA_DIR, "sentinel2_ndvi"),
 }
 
 # Also define as a standalone variable for backwards compatibility
@@ -1118,8 +1120,8 @@ def load_station_metadata_for_api():
     Returns a DataFrame with station info.
     """
     # Construct path directly
-    stations_meta_path = os.path.join(BASE_DIR, "ECA_blend_tx", "stations.txt")
-    
+    stations_meta_path = os.path.join(DATA_DIR, "ECA_blend_tx", "stations.txt")
+
     print(f"[INFO] Loading stations from: {stations_meta_path}")
     
     if not os.path.exists(stations_meta_path):
@@ -1218,8 +1220,8 @@ def search_stations():
         print(f"[DEBUG] Filters: name={name_query}, country={country_query}, var={has_variable}")
         
         # Load stations.txt
-        stations_meta_path = os.path.join(BASE_DIR, "ECA_blend_tx", "stations.txt")
-        
+        stations_meta_path = os.path.join(DATA_DIR, "ECA_blend_tx", "stations.txt")
+
         if not os.path.exists(stations_meta_path):
             print(f"[ERROR] stations.txt not found at {stations_meta_path}")
             return jsonify({"error": "stations.txt not found"}), 404
@@ -1256,12 +1258,12 @@ def search_stations():
                     station_vars = None
                     if has_variable or has_all_variables:
                         eca_dirs = {
-                            "TX": os.path.join(BASE_DIR, "ECA_blend_tx"),
-                            "TN": os.path.join(BASE_DIR, "ECA_blend_tn"),
-                            "TG": os.path.join(BASE_DIR, "ECA_blend_tg"),
-                            "RR": os.path.join(BASE_DIR, "ECA_blend_rr"),
-                            "PP": os.path.join(BASE_DIR, "ECA_blend_pp"),
-                            "FG": os.path.join(BASE_DIR, "ECA_blend_fg"),
+                            "TX": os.path.join(DATA_DIR, "ECA_blend_tx"),
+                            "TN": os.path.join(DATA_DIR, "ECA_blend_tn"),
+                            "TG": os.path.join(DATA_DIR, "ECA_blend_tg"),
+                            "RR": os.path.join(DATA_DIR, "ECA_blend_rr"),
+                            "PP": os.path.join(DATA_DIR, "ECA_blend_pp"),
+                            "FG": os.path.join(DATA_DIR, "ECA_blend_fg"),
                         }
                         
                         available_vars = []
@@ -1776,20 +1778,19 @@ def load_all_stations_metadata():
     
     # If PATHS not set, construct it manually
     if not stations_meta_path:
-        stations_meta_path = os.path.join(BASE_DIR, "ECA_blend_tx", "stations.txt")
-    
+        stations_meta_path = os.path.join(DATA_DIR, "ECA_blend_tx", "stations.txt")
+
     print(f"[INFO] Looking for stations.txt at: {stations_meta_path}")
-    
+
     if not os.path.exists(stations_meta_path):
         print(f"[ERROR] stations.txt not found at {stations_meta_path}")
-        print(f"[DEBUG] BASE_DIR is: {BASE_DIR}")
-        
-        # Try to list directory contents to debug
+        print(f"[DEBUG] DATA_DIR is: {DATA_DIR}")
+
         try:
-            tx_dir = os.path.join(BASE_DIR, "ECA_blend_tx")
+            tx_dir = os.path.join(DATA_DIR, "ECA_blend_tx")
             if os.path.exists(tx_dir):
                 files = os.listdir(tx_dir)
-                print(f"[DEBUG] Files in ECA_blend_tx: {files[:10]}...")  # Show first 10 files
+                print(f"[DEBUG] Files in ECA_blend_tx: {files[:10]}...")
             else:
                 print(f"[ERROR] ECA_blend_tx directory doesn't exist!")
         except Exception as e:
