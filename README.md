@@ -1,23 +1,5 @@
 # GenHack 4 - 2025 - Project: Urban Heat Island Bias Correction for ERA5-Land Analysis
 
-##  🏆PentaGen (Team 7)- 1st winner
-
-
-![GenHack 2024 Main Banner](https://raw.githubusercontent.com/mohymabrouk/genhack4-hackathon/main/genhack.jpeg)
-
-
-
-## Team: PentaGen (Team 7)
-
-### Team Members:
-- **Mohy Mabrouk** (Sorbonne Université)
-- **Massimo Pignatti** (University of Bologna)
-- **Ilyes Sais** (Université Paris Saclay)
-- **Daniel Huencho** (University College London)
-- **Muhammad Qaisar** (Université Paris Saclay)
-
----
-
 ## Project Overview
 
 ### The Challenge
@@ -221,3 +203,5 @@ For questions, collaborations, or access to the complete codebase:
 
 ---
 **Hackathon**: GenHack 4 2025
+#   e c o l e - p o l y t e c h n i q u e - u r b a n - c l i m a t e - h a c k a t h o n  
+ 
