@@ -193,14 +193,6 @@ We extend our gratitude to the **GenHack 2025 organizing committee**, **BNP Pari
 
 ---
 
-## Contact
-
-For questions, collaborations, or access to the complete codebase:
-
-**Team Lead**: Mohy Mabrouk
-
----
-
 *"Advancing urban climate science through innovative data integration and machine learning, creating actionable insights for a more resilient urban future."*
 
 ---
